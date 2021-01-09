@@ -1,0 +1,31 @@
+{% extends 'bootstrap/base.html' %}
+
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block content %}
+
+    <h1> Make the prediction : </h1>
+
+
+    {% block page_content %}
+        {{ wtf.quick_form(form) }}
+    {% endblock %}
+
+
+    {% if result != None %}
+
+        {% if result == 0 %}
+
+            <h1> This profil will buy on the website </h1>
+
+        {% endif %}
+
+        {% if result == 1 %}
+
+            <h1> This profil will not buy on the website </h1>
+
+        {% endif %}
+
+    {% endif %}
+
+{% endblock %}

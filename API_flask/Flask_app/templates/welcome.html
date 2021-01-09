@@ -1,0 +1,59 @@
+{% extends 'bootstrap/base.html' %}
+
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block content %}
+
+    <h1> Welcome to this prediction app ! </h1>
+
+    <!-- description -->
+    <h4> This application uses the dataset: Online Shoppers Purchasing Intention </h4>
+    <h4> The goal is to predict whether or not a customer will buy something on the web site according to severals features. </h4>
+
+    <!-- variables -->
+    <h3> Variables description </h3>
+
+    <strong> 
+        <h3> Pages Value </h3>
+    </strong>
+    <h4> The “PageValues” for a page are the average value of each session during which that page was visited. For the prediction, this is the most important variable. </h4>
+
+    <strong> 
+        <h3> Exit Rates </h3>
+    </strong>
+    <h4> The “ExitRate” for a page is the number of times a user exit the web site though this page divided by the number of times the page was used. It’s a percentage. </h4>
+
+    <strong> 
+        <h3> Product Related </h3>
+    </strong>
+    <h4> Number of pages view by the user during his session on the web site. </h4>
+
+    <strong> 
+        <h3> Product Related Duration</h3>
+    </strong>
+    <h4> Time spent by the user during his session on the web site on product related pages. </h4>
+
+    <h3> Push the button to start a prediction ! </h3>
+
+    {% block page_content %}
+    {{ wtf.quick_form(sub) }}
+    {% endblock %}
+
+    <h3> Source of the dataset </h3>
+
+    <h4> 
+        <p> 1. C. Okan Sakar </p>
+        <p> Department of Computer Engineering, Faculty of </p>
+        <p> Engineering and Natural Sciences, Bahcesehir University,</p>
+        <p> 34349 Besiktas, Istanbul, Turkey </p>    
+    </h4>
+
+    <h4> 
+        <p> 2. Yomi Kastro </p>
+        <p> Inveon Information Technologies Consultancy and Trade, </p>
+        <p> 34335 Istanbul, Turkey </p>    
+    </h4>
+
+
+{% endblock %}
+
